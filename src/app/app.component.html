@@ -1,19 +1,14 @@
 <div class="container">
   <div class="card-row">
-    <div class="card-header"><h1>My Todo List</h1></div>
-    <div class="card-body">
-      <input name="newTask" id="newtask" type="text" />
-      <button class="btn btn-outline-primary" type="submit" id="submit">
-        Submit
-      </button>
+    <div class="card-header">
+      <h1>{{ Title }}</h1>
     </div>
     <div class="card-body">
-      <h2>task list</h2>
-      <ul>
-        <li>step 1</li>
-        <li>step 1</li>
-        <li>step 1</li>
-      </ul>
+      <my-task-form [tasksListnew]="Tasklist1"></my-task-form>
+    </div>
+    <div class="card-body">
+      <h2>my task list ({{ Tasklist1.length }})</h2>
+      <app-task-list [tasks]="Tasklist1"></app-task-list>
     </div>
   </div>
 </div>
